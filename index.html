@@ -14,57 +14,69 @@
 </head>
 
 <body>
-    <div class="frame-container">
-        <div class="flex-container desktop">
-            <div class="flex-container__text ">
-                <h1>NORA&nbsp; MONKMAN</h1>
-                <h2>TALLER&nbsp; DE&nbsp; DISEÑO&nbsp; &&nbsp; OBJETOS</h2>
-                <img class="perfilMobile" src="/img/1.jpg" alt="">
-                <p class="flex-container__text__p">Hola, soy Nora. Estoy rediseñando mi página.<br>
-                    Dentro de muy poco van a poder ver mi universo creativo: <br>
-                    mis trabajos de diseño gráfico y mis objetos, piezas únicas & series limitadas.
-                    Diseños que llevo a distintas materialidades y texturas: papel, cerámica,
-                    textiles.<br>
-                    Objetos funcionales para embellecer los espacios y el alma.<br>
-                    Nos vemos pronto!
-                </p>
-                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<br>NM</h3>
-            </div>
-            <img src="/img/1.jpg" class="perfilDesktop" alt="">
-            <img src="/img/2.jpg" alt="">
+
+    <div class="flex-container desktop">
+        <div class="flex-container__text ">
+            <h1>NORA&nbsp; MONKMAN</h1>
+            <h2>TALLER&nbsp; DE&nbsp; DISEÑO&nbsp; &&nbsp; OBJETOS</h2>
+            <img class="perfilMobile" src="/img/1.jpg" alt="">
+            <p class="flex-container__text__p">Hola, soy Nora. Estoy rediseñando mi página.<br>
+                Dentro de muy poco van a poder ver mi universo creativo: <br>
+                mis trabajos de diseño gráfico y mis objetos, piezas únicas & series limitadas.
+                Diseños que llevo a distintas materialidades y texturas: papel, cerámica,
+                textiles.<br>
+                Objetos funcionales para embellecer los espacios y el alma.<br>
+                Nos vemos pronto!
+            </p>
+            <h3 class="NM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<br>NM</h3>
         </div>
-        <div class="grid-container">
-            <img src="/img/3.jpg" alt="" class="imagenGrid3">
-            <img src="/img/4.jpg" alt="" class="imagenGrid4">
-            <img src="/img/5.jpg" alt="" class="imagenGrid5">
-            <img src="/img/9.jpg" alt="" class="imagenGrid9">
-            <img src="/img/6.jpg" alt="" class="imagenGrid6">
-            <img src="/img/7.jpg" alt="" class="imagenGrid7">
-            <img src="/img/8.jpg" alt="" class="imagenGrid8">
-        </div>
+        <img src="/img/1.jpg" class="perfilDesktop" alt="">
+        <img src="/img/2.jpg" class="imagenFlex2" alt="">
     </div>
+    <div class="grid-container">
+        <img src="/img/3.jpg" alt="" class="imagenGrid3">
+        <img src="/img/4.jpg" alt="" class="imagenGrid4">
+        <img src="/img/5.jpg" alt="" class="imagenGrid5">
+        <img src="/img/9.jpg" alt="" class="imagenGrid9">
+        <img src="/img/6.jpg" alt="" class="imagenGrid6">
+        <img src="/img/7.jpg" alt="" class="imagenGrid7">
+        <img src="/img/8.jpg" alt="" class="imagenGrid8">
+    </div>
+
     <footer>
+        <div class="footer__title">
+            <h2>NORA&nbsp; MONKMAN</h2>
+            <h3><span>estudio taller de diseño</span> & objetos</h3>
+        </div>
         <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                 <path fill="black"
                     d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48m0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32m48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56m40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12" />
             </svg></a>
-        <p>noramonkman@gmail.com</p>
+            <a href="mailto:noramonkman@gmail.com?subject=Contacto desde la web Nora Monkman"><p>noramonkman@gmail.com</p></a>
     </footer>
     <script>
-        let anchoPantalla = window.innerWidth;
-        console.log('anchoPantalla', anchoPantalla)
-        let flexContainer = document.querySelector( '.flex-container' )
-        let isMobile = anchoPantalla < 680;
 
-        if ( isMobile ) {
-            flexContainer.classList.remove( 'desktop' )
-            flexContainer.classList.add( 'mobile' )
-            console.log( 'isMobile', isMobile )
-        } else {
-            console.log( 'isMobile', isMobile )
-            flexContainer.classList.add( 'desktop' )
-            flexContainer.classList.remove( 'mobile' )
-        }
+
+        document.addEventListener( 'DOMContentLoaded', function () {
+            handleResponsive();
+
+            window.addEventListener( 'resize', handleResponsive );
+
+            function handleResponsive () {
+                let anchoPantalla = window.innerWidth;
+                let flexContainer = document.querySelector( '.flex-container' );
+                let isMobile = anchoPantalla < 680;
+
+                if ( isMobile ) {
+                    flexContainer.classList.remove( 'desktop' );
+                    flexContainer.classList.add( 'mobile' );
+                } else {
+                    flexContainer.classList.add( 'desktop' );
+                    flexContainer.classList.remove( 'mobile' );
+                }
+            }
+        } );
+
     </script>
 </body>
 

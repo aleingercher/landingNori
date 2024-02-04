@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;300;400;500;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Nora Monkman</title>
 </head>
+
 <body>
-    <h1>Nora Monkman</h1>
+    <div class="frame-container">
+        <div class="flex-container desktop">
+            <div class="flex-container__text ">
+                <h1>NORA&nbsp; MONKMAN</h1>
+                <h2>TALLER&nbsp; DE&nbsp; DISEÑO&nbsp; &&nbsp; OBJETOS</h2>
+                <img class="perfilMobile" src="/img/1.jpg" alt="">
+                <p class="flex-container__text__p">Hola, soy Nora. Estoy rediseñando mi página.<br>
+                    Dentro de muy poco van a poder ver mi universo creativo: <br>
+                    mis trabajos de diseño gráfico y mis objetos, piezas únicas & series limitadas.
+                    Diseños que llevo a distintas materialidades y texturas: papel, cerámica,
+                    textiles.<br>
+                    Objetos funcionales para embellecer los espacios y el alma.<br>
+                    Nos vemos pronto!
+                </p>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<br>NM</h3>
+            </div>
+            <img src="/img/1.jpg" class="perfilDesktop" alt="">
+            <img src="/img/2.jpg" alt="">
+        </div>
+        <div class="grid-container">
+            <img src="/img/3.jpg" alt="" class="imagenGrid3">
+            <img src="/img/4.jpg" alt="" class="imagenGrid4">
+            <img src="/img/5.jpg" alt="" class="imagenGrid5">
+            <img src="/img/9.jpg" alt="" class="imagenGrid9">
+            <img src="/img/6.jpg" alt="" class="imagenGrid6">
+            <img src="/img/7.jpg" alt="" class="imagenGrid7">
+            <img src="/img/8.jpg" alt="" class="imagenGrid8">
+        </div>
+    </div>
+    <footer>
+        <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <path fill="black"
+                    d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48m0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32m48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56m40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12" />
+            </svg></a>
+        <p>noramonkman@gmail.com</p>
+    </footer>
+    <script>
+        let anchoPantalla = window.innerWidth;
+        console.log('anchoPantalla', anchoPantalla)
+        let flexContainer = document.querySelector( '.flex-container' )
+        let isMobile = anchoPantalla < 680;
+
+        if ( isMobile ) {
+            flexContainer.classList.remove( 'desktop' )
+            flexContainer.classList.add( 'mobile' )
+            console.log( 'isMobile', isMobile )
+        } else {
+            console.log( 'isMobile', isMobile )
+            flexContainer.classList.add( 'desktop' )
+            flexContainer.classList.remove( 'mobile' )
+        }
+    </script>
 </body>
+
 </html>
